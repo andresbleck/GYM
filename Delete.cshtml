@@ -1,0 +1,22 @@
+﻿@model GimnasioMVC.Dto.SocioDto
+
+@{
+    ViewData["Title"] = "Eliminar Socio";
+}
+
+<h2>Eliminar Socio</h2>
+
+<div>
+    <h3>¿Estás seguro de que deseas eliminar este socio?</h3>
+    <p>
+        <strong>Nombre: @Model.Nombre </strong><br />
+        <strong>Apellido: @Model.Apellido </strong> <br />
+        <strong>Telefono: @Model.NumeroDeTelefono</strong>
+    </p>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

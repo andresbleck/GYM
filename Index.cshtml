@@ -1,0 +1,35 @@
+﻿@model IEnumerable<GimnasioMVC.Dto.SocioDto>
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<h1>Lista de Socios</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var socio in Model)
+        {
+            <tr>
+                <td>@socio.Id</td>
+                <td>@socio.Nombre</td>
+                <td>@socio.Apellido</td>
+                <td>@socio.NumeroDeTelefono</td>
+                <td>
+                    <a asp-controller="Socios" asp-action="Edit" asp-route-id="@socio.Id" class="btn btn-primary">Editar</a>
+                    
+                    <a asp-controller="Socios" asp-action="Delete" asp-route-id="@socio.Id" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Socios" asp-action="Create" class="btn btn-success">Agregar Nuevo Socio</a>

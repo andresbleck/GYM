@@ -1,0 +1,25 @@
+﻿
+#bienvenidos {
+    font-size: 100px; /* Aumenta el tamaño */
+    margin-top: 50px; /* Aumenta la distancia desde la parte superior */
+}
+
+/* Estilo para el encabezado h3 */
+#gestion {
+    font-size: 30px; /* Aumenta el tamaño */
+    margin-top: 20px; /* Aumenta la distancia desde h1 */
+}
+
+/* Estilo para los botones */
+.custom-btn {
+    font-size: 18px; /* Aumenta el tamaño de fuente */
+    color: black; /* Cambia el color de texto a negro */
+    padding: 15px 30px; /* Aumenta el tamaño del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+    .custom-btn:hover {
+        background-color: #f0f0f0; /* Cambia el color de fondo al pasar el cursor */
+        color: black; /* Mantén el texto en negro al pasar el cursor */
+    }
+

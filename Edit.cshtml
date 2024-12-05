@@ -1,0 +1,24 @@
+﻿@model GimnasioMVC.Dto.SocioDto
+
+@{
+    ViewData["Title"] = "Editar Socio";
+}
+
+<h2>Editar Socio</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="Nombre"><strong>Nombre</strong></label>
+        <input type="text" class="form-control" asp-for="Nombre" />
+    </div>
+    <div class="form-group">
+        <label for="Apellido"><strong>Apellido</strong></label>
+        <input type="text" class="form-control" asp-for="Apellido" />
+    </div>
+    <div class="form-group">
+        <label for="Telefono"><strong>Telefono</strong></label>
+        <input type="tel" class="form-control" asp-for="NumeroDeTelefono" />
+    </div>
+    <button type="submit" class="btn btn-success">Guardar Cambios</button>
+</form>
